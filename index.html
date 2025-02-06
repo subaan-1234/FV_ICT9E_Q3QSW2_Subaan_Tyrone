@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operators Showcase</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e9ecef;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #28a745;
+            text-align: center;
+        }
+        p {
+            font-size: 1.1em;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Understanding JavaScript Operators</h1>
+<p>This interactive page illustrates various JavaScript operators through buttons that display results.</p>
+
+<div class="container">
+    <button class="btn btn-primary" onclick="performArithmetic()">Calculate Basic Operations</button>
+    <p id="arithmeticResult" class="result"></p>
+
+    <button class="btn btn-secondary" onclick="evaluateComparison()">Evaluate Comparison</button>
+    <p id="comparisonResult" class="result"></p>
+
+    <button class="btn btn-success" onclick="demonstrateLogical()">Demonstrate Logical Operations</button>
+    <p id="logicalResult" class="result"></p>
+</div>
+
+<script>
+    function performArithmetic() {
+        var a = 12;
+        var b = 3;
+        var add = a + b; 
+        var subtract = a - b; 
+        var multiply = a * b; 
+        var divide = a / b; 
+        document.getElementById("arithmeticResult").innerHTML = 
+            `Addition: ${add}, Subtraction: ${subtract}, Multiplication: ${multiply}, Division: ${divide}`;
+    }
+
+    
+    function evaluateComparison() {
+        var x = 10;
+        var y = "10";
+        var looseEqual = (x == y); 
+        var strictEqual = (x === y); 
+        document.getElementById("comparisonResult").innerHTML = 
+            `Is 10 == '10'? ${looseEqual}, Is 10 === '10'? ${strictEqual}`;
+    }
+
+    
+    function demonstrateLogical() {
+        var p = true;
+        var q = false;
+        var andOperation = (p && q);
+        var orOperation = (p || q); 
+        document.getElementById("logicalResult").innerHTML = 
+            `Is (true && false)? ${andOperation}, Is (true || false)? ${orOperation}`;
+    }
+</script>
+
+</body>
+</html>
+
+
